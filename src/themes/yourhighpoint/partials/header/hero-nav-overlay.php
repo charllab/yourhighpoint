@@ -1,6 +1,6 @@
-<header id="header" class="hero-nav-overlay bg-dark">
-    <a href="" target="_blank" class="btn btn-light rounded-0 mb-4 d-block d-lg-none">
-        Call To Action
+<header id="header" class="hero-nav-overlay bg-primary">
+    <a href="<?php the_sub_field('appointment_link', 'options'); ?>" target="_blank" class="btn btn-light rounded-0 mb-4 d-block d-lg-none text-uppercase">
+        Book An Appointment
     </a>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
@@ -19,8 +19,8 @@
             </button>
 
             <div class="d-lg-flex flex-lg-column d-none d-lg-block">
-                <div id="top-buttons" class="d-flex ml-auto mb-2 justify-content-end align-items-center">
-                    <a class="btn btn-link text-white my-auto mr-2" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>"><?php the_field('phone_number', 'options'); ?></a>
+                <div id="top-buttons" class="d-flex ml-auto mb-2 justify-content-end align-items-center text-uppercase">
+                    Call Us Today <a class="btn btn-link text-white my-auto mr-2" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>"><?php the_field('phone_number', 'options'); ?></a>
 
                     <div class="social-links mr-4">
                         <?php while( have_rows('social_links', 'options') ): the_row(); ?>
@@ -32,8 +32,8 @@
                         <?php endwhile; ?>
                     </div>
 
-                    <a href="" target="_blank" class="btn my-auto btn-light">
-                        Call To Action
+                    <a href="<?php the_sub_field('appointment_link', 'options'); ?>" target="_blank" class="btn my-auto btn-light text-uppercase">
+                        Book An Appointment
                     </a>
                 </div>
 

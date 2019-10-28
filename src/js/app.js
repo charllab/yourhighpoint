@@ -1,7 +1,7 @@
 jQuery(function () {
 
     // Slow Font Observing
-    var font = new FontFaceObserver('NexaRustSans-Black');
+    var font = new FontFaceObserver('nexa_rust_sansblack');
 
     font.load(null, 5000).then(function () {
         console.log('Font is available');
