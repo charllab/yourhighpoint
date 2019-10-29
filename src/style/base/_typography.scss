@@ -1,14 +1,9 @@
 @font-face {
-    font-family: 'nexa_rust_sansblack';
-    src: url('../../fonts/nexarustsans-black-webfont.eot');
-    src: url('../../fonts/nexarustsans-black-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/nexarustsans-black-webfont.woff2') format('woff2'),
-    url('../../fonts/nexarustsans-black-webfont.woff') format('woff'),
-    url('../../fonts/nexarustsans-black-webfont.ttf') format('truetype'),
-    url('../../fonts/nexarustsans-black-webfont.svg#nexa_rust_sansblack') format('svg');
+    font-family: 'NexaRustSans-Black-Free';
+    src: url('../fonts/NexaRustSans-Black-Free-webfont.woff2') format('woff2'),
+    url('../fonts/NexaRustSans-Black-Free-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-
 }
 
 // Responsive font sizing
@@ -66,7 +61,7 @@ body {
 }
 
 .fonts-loaded .h1, .fonts-loaded h1 {
-    font-family: "NexaRustSans-Black", "Open Sans", Arial, sans-serif;
+    font-family: "NexaRustSans-Black-Free", "Open Sans", Arial, sans-serif;
 }
 
 .spaced-list {
