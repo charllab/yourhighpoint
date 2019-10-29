@@ -7,6 +7,8 @@ $enable-print-styles: false;
 // Colors
 $primary: #1C2F44;
 $secondary: #908070;
+$soft: #E5E0D8;
+$offwhite: #EEF0EF;
 
 $body-color: #808D8D;
 $headings-color: $primary;
@@ -37,7 +39,35 @@ $container-max-widths: (
 
 // Misc
 
-$spacer: 1rem;
+
+$spacer: 1.35rem; //27px
+
+$spacers: () !default;
+$spacers: map-merge((
+    0: 0,
+    1: ($spacer * 1),
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5),
+    6: ($spacer * 6),
+    7: ($spacer * 7),
+    8: ($spacer * 8),
+    9: ($spacer * 9),
+    10: ($spacer * 10),
+    11: ($spacer * 11),
+    12: ($spacer * 12),
+    35: ($spacer * .35),
+    250: ($spacer * .25),
+    50: ($spacer * .5),
+    75: ($spacer * .75),
+    125: ($spacer * 1.25),
+    150: ($spacer * 1.5),
+    175: ($spacer * 1.75),
+    25: ($spacer * 2.5),
+    350: ($spacer * 3.5)
+
+), $spacers);
 
 // Fonts
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Arial, sans-serif;

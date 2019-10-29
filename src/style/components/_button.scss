@@ -6,3 +6,27 @@ button {
     border-radius: 0;
     font-weight: 700;
 }
+
+.btn-nav {
+    white-space: normal;
+    border: 3px solid $soft;
+    color: $primary;
+    font-size: .9rem;
+
+    @include media-breakpoint-down(xxs) {
+        max-width: 140px;
+    }
+
+    @include media-breakpoint-up(lg) {
+        max-width: 204px;
+        font-size: 1rem;
+    }
+}
+.btn-nav-light {
+    @extend .btn-nav;
+    background-color: $soft;
+}
+.btn-nav-outline {
+    @extend .btn-nav;
+    color: $soft;
+}

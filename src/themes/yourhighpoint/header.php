@@ -20,4 +20,4 @@
 
 <body <?php body_class(); ?>>
 
-    <?php get_template_part('partials/header/hero-nav-overlay'); ?>
+    <?php get_template_part('partials/header/main-nav'); ?>
