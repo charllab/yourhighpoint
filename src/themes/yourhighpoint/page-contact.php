@@ -69,6 +69,13 @@ get_header(); ?>
                     </div><!-- col -->
                 </div><!-- row -->
 
+
+                <div class="row">
+                    <div class="col">
+                        <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=10]'); ?>
+                    </div>
+                </div>
+
             </div><!-- container -->
         </div>
 

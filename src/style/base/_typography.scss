@@ -41,7 +41,7 @@ body {
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+    margin-bottom: $spacer;
     text-transform: uppercase;
 }
 .h1, h1 {
@@ -59,6 +59,9 @@ body {
 .h3, h3 {
     font-weight: 600;
 }
+p {
+    margin-bottom: $spacer;
+}
 
 .fonts-loaded .h1, .fonts-loaded h1 {
     font-family: "NexaRustSans-Black-Free", "Open Sans", Arial, sans-serif;
@@ -70,6 +73,11 @@ body {
 
 .spaced-list li {
     margin-bottom: .5rem;
+}
+
+.lead {
+    font-size: 1.5rem;
+    line-height: 1.3;
 }
 
 .lead strong {
