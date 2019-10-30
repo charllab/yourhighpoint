@@ -95,6 +95,17 @@
         }
     }
 
+    @include media-breakpoint-only(lg) {
+        .navbar-nav .nav-link {
+            font-size: .8rem;
+        }
+        .dropdown-menu {
+            & > .menu-item > .nav-link {
+                font-size: .7rem;
+            }
+        }
+    }
+
 }
 
 .mainnav-m {
