@@ -160,7 +160,15 @@ function register_acf_block_types()
         'category' => 'formatting',
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['banner'],
-        'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/testimonial-carousel-styles.css',
+    ]);
+    acf_register_block_type([
+        'name' => 'simple-pingpong',
+        'title' => __('Simple Ping Pong Layout Block'),
+        'description' => __('A simple pingpong image and text block.'),
+        'render_template' => 'includes/gutenburg/simple-pingpong.php',
+        'category' => 'formatting',
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
     ]);
 }
 

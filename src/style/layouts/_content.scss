@@ -159,3 +159,19 @@ body {
         font-weight: 700;
     }
 }
+
+.section--ping-pong .row > div:first-child {
+    min-height: 60vh;
+    background-position-y: top !important; }
+
+.section--ping-pong .section--ping-pong__content-block {
+    height: 700px;
+    min-height: 700px;
+    max-width: 672px;
+}
+
+.section--ping-pong .section--ping-pong__content-page {
+    @include media-breakpoint-up(xl) {
+        max-width: 834px;
+    }
+}
