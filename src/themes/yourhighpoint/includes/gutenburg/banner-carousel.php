@@ -46,12 +46,10 @@ $post_objects = get_field('banners');
 
                 <?php foreach ($post_objects as $post): ?>
 
-                <div class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?>">
+                <div class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?> d-flex" style="background-image: url(<?php echo $post['banner_image']; ?>); background-position: <?php echo $post['image_position']; ?>">
                     <div class="banner__color-overlay"></div>
-                    <img class="d-block w-100" src="<?php echo $post['banner_image']; ?>" alt="First slide">
-                    <div class="carousel-caption">
-                        <div class="container h-100 px-0">
-                            <div class="row align-items-center h-100">
+                        <div class="container py-3 py-md-1">
+                            <div class="row align-items-center">
                                 <div class="col-xxl-6">
                                     <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
                                     <?php if ($post['blurb']): ?>
@@ -63,7 +61,6 @@ $post_objects = get_field('banners');
                                 </div>
                             </div>
                         </div>
-                    </div>
                 </div>
                 <?php $index++; endforeach; ?>
 

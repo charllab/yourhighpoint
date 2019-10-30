@@ -76,6 +76,22 @@ body {
     text-align: left;
 }
 .carousel-block__banner {
+
+    .carousel-item {
+        background-size: cover;
+        background-position: center;
+
+        @include media-breakpoint-up(md) {
+            height: 428px;
+            min-height: 430px;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 856px;
+            min-height: 858px;
+        }
+    }
+
     .carousel-control-prev-icon {
         background-image: url('../images/carousel-banner-left-arrow.svg');
     }
