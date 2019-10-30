@@ -19,7 +19,7 @@ html {
     }
 }
 
-@include media-breakpoint-up(xxl) {
+@include media-breakpoint-up(lg) {
     html {
         font-size: 20px;
         line-height: 1.35;
@@ -93,4 +93,19 @@ body {
 }
 .text-offwhite {
     color: $offwhite !important;
+}
+
+// gutenberg styling
+
+.has-small-font-size {
+    @extend .small;
+}
+.has-normal-font-size, .has-regular-font-size {
+    font-size: 1rem;
+}
+.has-large-font-size {
+    @extend .h2;
+}
+.has-huge-font-size, .has-larger-font-size {
+    @extend .h1;
 }
