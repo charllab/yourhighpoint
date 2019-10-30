@@ -31,8 +31,7 @@ if (!function_exists('custom_after_setup_theme')) {
 
     add_action('after_setup_theme', 'custom_after_setup_theme', 11);
 
-    // Enable wide alignment for Gutenberg
-    add_theme_support( 'align-wide' );
+
 
     function custom_after_setup_theme()
     {
@@ -48,6 +47,41 @@ if (!function_exists('custom_after_setup_theme')) {
         // Style Gutenberg
         add_theme_support('editor-styles');
         add_editor_style('style-editor.css');
+
+        // Enable wide alignment for Gutenberg
+        add_theme_support( 'align-wide' );
+
+        // Remove custom font-sizing in backend Gutenberg
+        add_theme_support( 'disable-custom-font-sizes' );
+
+        // Custom editor font-sizes
+        add_theme_support( 'editor-font-sizes', array(
+            array(
+                'name'      => __( 'small', 'sproing' ),
+                'shortName' => __( 'S', 'sproing' ),
+                'size'      => 12,
+                'slug'      => 'small'
+            ),
+            array(
+                'name'      => __( 'regular', 'sproing' ),
+                'shortName' => __( 'M', 'sproing' ),
+                'size'      => 16,
+                'slug'      => 'regular'
+            ),
+            array(
+                'name'      => __( 'large', 'sproing' ),
+                'shortName' => __( 'L', 'sproing' ),
+                'size'      => 20,
+                'slug'      => 'large'
+            ),
+            array(
+                'name'      => __( 'larger', 'sproing' ),
+                'shortName' => __( 'XL', 'sproing' ),
+                'size'      => 24,
+                'slug'      => 'larger'
+            )
+        ) );
+
     }
 }
 // Renaming Post in Sidebar
