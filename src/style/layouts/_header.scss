@@ -43,12 +43,19 @@
     @include media-breakpoint-down(md) {
         padding: 0;
 
+        .dropdown-toggle::after {
+            display: none;
+        }
+
         .dropdown-menu {
             display: block;
-            background: none;
+            border-radius: 0;
+            width: 100%;
+            background: transparent;
             border: none;
+            border-left: 2px solid rgba($soft,.25);
             margin: 0;
-            padding: 0 0 0 1.5rem;
+            padding: 0 0 0 .75rem;
         }
     }
 

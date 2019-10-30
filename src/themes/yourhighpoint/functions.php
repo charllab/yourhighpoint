@@ -31,6 +31,9 @@ if (!function_exists('custom_after_setup_theme')) {
 
     add_action('after_setup_theme', 'custom_after_setup_theme', 11);
 
+    // Enable wide alignment for Gutenberg
+    add_theme_support( 'align-wide' );
+
     function custom_after_setup_theme()
     {
         remove_theme_support('custom-background');
@@ -76,8 +79,6 @@ function revcon_change_post_object() {
 
 add_action( 'admin_menu', 'spr_change_post_label' );
 add_action( 'init', 'revcon_change_post_object' );
-
-
 
 /* Misc */
 show_admin_bar(false);

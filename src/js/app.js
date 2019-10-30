@@ -9,6 +9,8 @@ jQuery(function () {
         console.log('Font is not available after waiting 5 seconds');
     });
 
+    $('#main-menu-mobile').find('a').removeAttr('data-toggle');
+
 
     // Auto target _blank external links
     targetBlankExternalLinks();

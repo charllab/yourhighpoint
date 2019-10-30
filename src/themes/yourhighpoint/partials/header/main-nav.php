@@ -25,8 +25,6 @@
                     </a>
                 </div>
 
-
-
                 <div class="d-lg-flex flex-lg-column d-none d-lg-block ml-auto mr-1 ml-lg-1 mr-lg-0">
                     <div id="top-buttons" class="d-flex ml-auto justify-content-end align-items-center text-uppercase">
                         <a class="btn btn-nav btn-nav-outline my-auto mr-1" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>">Call Us Today <?php the_field('phone_number', 'options'); ?></a>
@@ -82,14 +80,14 @@
 
     </nav>
 
-    <div class="mainnav-m collapse navbar-collapse py-1">
+    <div class="mainnav-m collapse navbar-collapse">
         <?php wp_nav_menu([
             'theme_location' => 'primary',
-            'container_class' => 'container px-1',
+            'container_class' => 'container p-1',
             'container_id' => 'mainnav',
             'menu_class' => 'navbar-nav',
             'fallback_cb' => '',
-            'menu_id' => 'main-menu',
+            'menu_id' => 'main-menu-mobile',
             'walker' => new understrap_WP_Bootstrap_Navwalker(),
         ]); ?>
     </div>
