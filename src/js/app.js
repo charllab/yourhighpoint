@@ -9,7 +9,25 @@ jQuery(function () {
         console.log('Font is not available after waiting 5 seconds');
     });
 
-    $('#main-menu-mobile').find('a').removeAttr('data-toggle');
+    // remove data-toggle and expand dropdowns on mobile
+    jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
+
+    // enable touch for bootstrap carousel
+    jQuery(".carousel").on("touchstart", function(event){
+        var xClick = event.originalEvent.touches[0].pageX;
+        jQuery(this).one("touchmove", function(event){
+            var xMove = event.originalEvent.touches[0].pageX;
+            if( Math.floor(xClick - xMove) > 5 ){
+                jQuery(this).carousel('next');
+            }
+            else if( Math.floor(xClick - xMove) < -5 ){
+                jQuery(this).carousel('prev');
+            }
+        });
+        jQuery(".carousel").on("touchend", function(){
+            jQuery(this).off("touchmove");
+        });
+    });
 
 
     // Auto target _blank external links
