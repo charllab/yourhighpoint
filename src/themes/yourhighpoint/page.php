@@ -115,7 +115,7 @@ get_header();
         <div class="container py-2">
 
             <div class="row">
-                <div class="col-12">
+                <div class="col">
 
                     <?php
                     if (function_exists('yoast_breadcrumb')) {

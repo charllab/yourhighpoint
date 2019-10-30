@@ -137,3 +137,23 @@ if (function_exists('acf_add_options_page')) {
         'redirect' => false
     ]);
 }
+
+/* Gutenberg */
+
+function register_acf_block_types()
+{
+    acf_register_block_type([
+        'name' => 'testimonial-carousel',
+        'title' => __('Testimonial Carousel'),
+        'description' => __('A rotating carousel that features quotes with citations.'),
+        'render_template' => 'includes/gutenburg/testimonial-carousel.php',
+        'category' => 'formatting',
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['testimonial'],
+        'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/testimonial-carousel-styles.css',
+    ]);
+}
+
+if (function_exists('acf_register_block_type')) {
+    add_action('acf/init', 'register_acf_block_types');
+}
