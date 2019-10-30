@@ -62,6 +62,8 @@ $post_objects = get_field('testimonials');
                 <?php $index++; endforeach; ?>
 
             </div>
+
+            <?php if (count($post_objects) > 1) { ?>
             <a class="carousel-control-prev" href="#page-carousel-<?php echo $id; ?>" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
@@ -70,6 +72,7 @@ $post_objects = get_field('testimonials');
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
+            <?php } ?>
         </div>
     </div>
 

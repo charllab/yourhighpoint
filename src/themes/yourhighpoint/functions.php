@@ -145,11 +145,21 @@ function register_acf_block_types()
     acf_register_block_type([
         'name' => 'testimonial-carousel',
         'title' => __('Testimonial Carousel'),
-        'description' => __('A rotating carousel that features quotes with citations.'),
+        'description' => __('A rotating carousel that features testimonials with citations.'),
         'render_template' => 'includes/gutenburg/testimonial-carousel.php',
         'category' => 'formatting',
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['testimonial'],
+        'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/testimonial-carousel-styles.css',
+    ]);
+    acf_register_block_type([
+        'name' => 'banner-carousel',
+        'title' => __('Banner Carousel'),
+        'description' => __('A rotating carousel that features banners with optional text.'),
+        'render_template' => 'includes/gutenburg/banner-carousel.php',
+        'category' => 'formatting',
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['banner'],
         'enqueue_style' => get_template_directory_uri().'/includes/gutenburg/testimonial-carousel-styles.css',
     ]);
 }
