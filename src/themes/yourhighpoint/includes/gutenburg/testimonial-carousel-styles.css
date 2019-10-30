@@ -7,8 +7,3 @@
 .wp-testimonial-carousel .components-placeholder__label {
     margin-bottom: 0;
 }
-
-.block-editor-block-list__layout .block-editor-block-list__block[data-align=full] {
-    margin-left: auto;
-    margin-right: auto;
-}

@@ -12,6 +12,12 @@ body {
     max-width: 1166px;
 }
 
+/* Width of "full-wide" blocks - you need some CSS wizardry to get these blocks to extend outside the wrapper */
+.wp-block[data-align="full"] {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Gutenberg styling examples: https://css-tricks.com/styling-the-gutenberg-columns-block */
 
 /*
