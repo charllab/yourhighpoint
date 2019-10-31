@@ -6,9 +6,13 @@ button {
     border-radius: 0;
     font-weight: 700;
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1rem;
     line-height: 1.2;
     padding: 1.075rem $spacer*1.5;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 1.5rem;
+    }
 }
 
 .btn-nav {
@@ -16,10 +20,17 @@ button {
     border: 3px solid $soft;
     color: $primary;
     font-size: .9rem;
-    padding: $spacer/2;
+    padding: $spacer/2 0;
 
     @include media-breakpoint-down(xxs) {
         max-width: 140px;
+    }
+    @include media-breakpoint-down(lg) {
+        width: 90%;
+    }
+
+    @include media-breakpoint-up(xs) {
+        padding: $spacer/2;
     }
 
     @include media-breakpoint-up(lg) {
