@@ -5,6 +5,10 @@ button {
 .btn {
     border-radius: 0;
     font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    padding: 1.075rem $spacer*1.5;
 }
 
 .btn-nav {
@@ -12,6 +16,7 @@ button {
     border: 3px solid $soft;
     color: $primary;
     font-size: .9rem;
+    padding: $spacer/2;
 
     @include media-breakpoint-down(xxs) {
         max-width: 140px;
@@ -29,4 +34,18 @@ button {
 .btn-nav-outline {
     @extend .btn-nav;
     color: $soft;
+
+    &:link,
+    &:visited,
+    &:hover,
+    &:active {
+        color: $soft;
+    }
+
+}
+.btn-fullwidth {
+    @extend .btn;
+    width: 100%;
+    color: white;
+    white-space: normal;
 }

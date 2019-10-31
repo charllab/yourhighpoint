@@ -114,6 +114,6 @@
     }
 }
 .social-link {
-    padding-left: $spacer*.25;
-    padding-right: $spacer*.25;
+    cursor: pointer;
+    padding: 0 $spacer/2;
 }

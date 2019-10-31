@@ -65,7 +65,7 @@
 
                     <div class="social-links">
                         <?php while( have_rows('social_links', 'options') ): the_row(); ?>
-                            <a class="social-link btn btn-link text-offwhite" target="_blank" href="<?php the_sub_field('url'); ?>">
+                            <a class="social-link text-offwhite" target="_blank" href="<?php the_sub_field('url'); ?>">
                                 <i class="<?php the_sub_field('icon_class'); ?> fa-lg">
                                     <span class="sr-only"><?php the_sub_field('label'); ?></span>
                                 </i>
