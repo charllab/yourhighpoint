@@ -140,6 +140,23 @@ if (function_exists('acf_add_options_page')) {
 
 /* Gutenberg */
 
+// register custom editor option styles
+
+function hppr_gutenberg_scripts() {
+
+    wp_enqueue_script(
+        'hppr-editor',
+        get_stylesheet_directory_uri() . '/js/custom-block-settings.js',
+        array( 'wp-blocks', 'wp-dom' ),
+        filemtime( get_stylesheet_directory() . '/js/custom-block-settings.js' ),
+        true
+    );
+}
+add_action( 'enqueue_block_editor_assets', 'hppr_gutenberg_scripts' );
+
+
+// register custom blocks
+
 function register_acf_block_types()
 {
     acf_register_block_type([

@@ -60,3 +60,20 @@ button {
     color: white;
     white-space: normal;
 }
+
+.wp-block-button__link {
+    @extend .btn;
+    background-color: $primary;
+}
+.is-style-outline .wp-block-button__link {
+    @extend .btn;
+    color: $primary;
+    background-color: white;
+    border: 3px solid $primary;
+}
+.is-style-full .wp-block-button__link {
+    @extend .btn;
+    width: 100%;
+    color: white;
+    white-space: normal;
+}
