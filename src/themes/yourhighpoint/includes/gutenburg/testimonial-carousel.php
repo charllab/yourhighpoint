@@ -48,7 +48,7 @@ $post_objects = get_field('testimonials');
                 <?php foreach ($post_objects as $post): ?>
                     <div
                         class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?> pt-5 pb-4 pt-xxl-9 pb-xxl-7">
-                        <div class="container h-100 px-0">
+                        <div class="container h-100 px-0 position-relative">
                             <div class="row justify-content-center">
                                 <div class="col-9 col-lg-8 text-center">
                                     <p class="lead"><?php echo $post['quote']; ?></p>

@@ -77,3 +77,10 @@ button {
     color: white;
     white-space: normal;
 }
+
+// remove button bottom margin on team page children
+.parent-pageid-52 {
+    .wp-block-button {
+        margin-bottom: 0;
+    }
+}

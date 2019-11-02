@@ -118,6 +118,25 @@ body {
 }
 
 .carousel-block__testimonial {
+    .container {
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            width: 52px;
+            height: 42px;
+        }
+        &::before {
+            top: -42px;
+            left: 10%;
+            background: transparent url('../images/quote-mark-left.svg') no-repeat center;
+        }
+        &::after {
+            bottom: 42px;
+            right: 10%;
+            background: transparent url('../images/quote-mark-right.svg') no-repeat center;
+        }
+    }
+
     .carousel-control-prev-icon {
         background-image: url('../images/carousel-light-left-arrow.svg');
     }
@@ -129,6 +148,22 @@ body {
         width: 22px;
         height: 46px;
         background-size: 100% 100%;
+    }
+
+    @include media-breakpoint-down(md) {
+        .container {
+            &::before, &::after {
+                width: 26px;
+                height: 21px;
+                background-size: 26px 21px;
+            }
+            &::before {
+                top: -31px;
+            }
+            &::after {
+                bottom: 0;
+            }
+        }
     }
 
     @include media-breakpoint-up(lg) {
