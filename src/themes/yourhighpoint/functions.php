@@ -51,6 +51,27 @@ if (!function_exists('custom_after_setup_theme')) {
         // Enable wide alignment for Gutenberg
         add_theme_support( 'align-wide' );
 
+        add_theme_support( 'editor-color-palette', array(
+            array (
+                'name'  =>  __('Primary', 'hppr'),
+                'slug'  =>  'theme_primary',
+                'color' =>  '#1C2F44',
+            ),
+            array (
+                'name'  =>  __('Secondary', 'hppr'),
+                'slug'  =>  'theme_secondary',
+                'color' =>  '#908070',
+            ),
+            array (
+                'name'  =>  __('Eggshell', 'hppr'),
+                'slug'  =>  'eggshell',
+                'color' =>  '#F8F8F8',
+            ),
+        ));
+
+        // remove WP editor default custom colors
+        add_theme_support( 'disable-custom-colors' );
+
         // Remove custom font-sizing in backend Gutenberg
         add_theme_support( 'disable-custom-font-sizes' );
 
