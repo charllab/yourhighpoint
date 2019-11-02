@@ -36,7 +36,7 @@ if (!function_exists('custom_after_setup_theme')) {
     function custom_after_setup_theme()
     {
         remove_theme_support('custom-background');
-        //remove_theme_support('post-thumbnails');
+        remove_theme_support('post-thumbnails');
 
         register_nav_menus([
             'primary' => 'Primary Menu',
@@ -191,4 +191,14 @@ function register_acf_block_types()
 
 if (function_exists('acf_register_block_type')) {
     add_action('acf/init', 'register_acf_block_types');
+}
+
+// if page is child-page
+function is_child($pageID) {
+    global $post;
+    if( is_page() && ($post->post_parent==$pageID) ) {
+        return true;
+    } else {
+        return false;
+    }
 }
