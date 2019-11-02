@@ -86,11 +86,11 @@ body {
         background-position: center;
 
         @include media-breakpoint-up(md) {
-            height: 428px;
-            min-height: 430px;
+            padding-top: $spacer*2;
+            padding-bottom: $spacer*2;
         }
 
-        @include media-breakpoint-up(xl) {
+        @include media-breakpoint-up(xxl) {
             height: 856px;
             min-height: 858px;
         }

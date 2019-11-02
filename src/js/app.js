@@ -10,14 +10,25 @@ jQuery(function () {
     });
 
     // set animated heights on carousel
-    $('.carousel').carousel({
+    jQuery('.carousel').carousel({
         interval: 9000
     }).on('slide.bs.carousel', function (e) {
-        var nextH = $(e.relatedTarget).innerHeight();
+        var nextH = jQuery(e.relatedTarget).innerHeight();
 
-        $(this).find('.active.carousel-item').parent().animate({
+        jQuery(this).find('.active.carousel-item').parent().animate({
             height: nextH
         }, 500);
+    });
+
+
+    // developer window resizing trigger slide next to fix height
+    var resizeTimer;
+
+    jQuery(window).on('resize', function(e) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function() {
+            jQuery('.carousel').carousel('next');
+        }, 250);
     });
 
     // remove data-toggle and expand dropdowns on mobile
