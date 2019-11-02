@@ -306,7 +306,7 @@ gulp.task('footer-scripts-prod', () => {
 
 gulp.task('custom-block-settings', () => {
     return gulp.src('src/js/custom-block-settings.js')
-        .pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/js'));
+        .pipe(gulp.dest('dist/themes/' + themeName + '/js'));
 });
 
 gulp.task('plugins-prod', () => {
