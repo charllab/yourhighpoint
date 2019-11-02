@@ -138,6 +138,7 @@ gulp.task('dev', [
     'style-dev',
     'header-scripts-dev',
     'footer-scripts-dev',
+    'custom-block-settings',
     'plugins-dev',
     'watch'
 
@@ -212,6 +213,11 @@ gulp.task('plugins-dev', () => {
         .pipe(gulp.dest(publicDir + 'wordpress/wp-content/plugins'));
 });
 
+gulp.task('custom-block-settings', () => {
+    return gulp.src('src/js/custom-block-settings.js')
+        .pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/js'));
+});
+
 gulp.task('reload-js', ['footer-scripts-dev', 'header-scripts-dev'], (done) => {
     browserSync.reload();
     done();
@@ -250,6 +256,7 @@ gulp.task('prod', [
     'style-prod',
     'header-scripts-prod',
     'footer-scripts-prod',
+    'custom-block-settings',
     'plugins-prod'
 ]);
 
@@ -295,6 +302,11 @@ gulp.task('footer-scripts-prod', () => {
         .pipe(concat('footer-bundle.js'))
         .pipe(uglify())
         .pipe(gulp.dest('dist/themes/' + themeName + '/js'));
+});
+
+gulp.task('custom-block-settings', () => {
+    return gulp.src('src/js/custom-block-settings.js')
+        .pipe(gulp.dest(publicDir + 'wordpress/wp-content/themes/' + themeName + '/js'));
 });
 
 gulp.task('plugins-prod', () => {
