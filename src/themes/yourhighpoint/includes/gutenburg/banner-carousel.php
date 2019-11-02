@@ -5,7 +5,7 @@ if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
 $className = '';
-if( !empty($block['align']) ) {
+if (!empty($block['align'])) {
     $className .= ' align' . $block['align'];
 }
 // Load values and assing defaults.
@@ -46,32 +46,39 @@ $post_objects = get_field('banners');
 
                 <?php foreach ($post_objects as $post): ?>
 
-                <div class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?> d-flex" style="background-image: url(<?php echo $post['banner_image']; ?>); background-position: <?php echo $post['image_position']; ?>">
-                    <div class="banner__color-overlay"></div>
-                        <div class="container py-3 py-md-1">
-                            <div class="row align-items-center">
-                                <div class="col-xxl-6">
-                                    <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
-                                    <?php if ($post['blurb']): ?>
-                                    <p class="lead text-primary d-none d-md-block"><?php echo $post['blurb']; ?></p>
-                                    <?php endif; ?>
-                                    <?php if ($post['button_text']): ?>
-                                    <a href="<?php echo $post['button_link']; ?>" class="btn btn-primary"><?php echo $post['button_text']; ?></a>
-                                    <?php endif; ?>
+                    <div
+                        class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?>"
+                        style="background-image: url(<?php echo $post['banner_image']; ?>); background-position: <?php echo $post['image_position']; ?>">
+                        <div class="d-flex h-100">
+                            <div class="banner__color-overlay"></div>
+                            <div class="container py-3 py-md-1">
+                                <div class="row align-items-center h-100">
+                                    <div class="col-sm-9 offset-sm-1 col-xl-6 offset-xl-0">
+                                        <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
+                                        <?php if ($post['blurb']): ?>
+                                            <p class="lead text-primary d-none d-md-block"><?php echo $post['blurb']; ?></p>
+                                        <?php endif; ?>
+                                        <?php if ($post['button_text']): ?>
+                                            <a href="<?php echo $post['button_link']; ?>"
+                                               class="btn btn-primary"><?php echo $post['button_text']; ?></a>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                </div>
-                <?php $index++; endforeach; ?>
+                    </div>
+                    <?php $index++; endforeach; ?>
 
             </div>
 
             <?php if (count($post_objects) > 1) { ?>
-                <a class="carousel-control-prev" href="#banner-carousel-<?php echo $id; ?>" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#banner-carousel-<?php echo $id; ?>" role="button"
+                   data-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                 </a>
-                <a class="carousel-control-next" href="#banner-carousel-<?php echo $id; ?>" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#banner-carousel-<?php echo $id; ?>" role="button"
+                   data-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                 </a>

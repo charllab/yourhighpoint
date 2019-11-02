@@ -9,6 +9,17 @@ jQuery(function () {
         console.log('Font is not available after waiting 5 seconds');
     });
 
+    // set animated heights on carousel
+    $('.carousel').carousel({
+        interval: 9000
+    }).on('slide.bs.carousel', function (e) {
+        var nextH = $(e.relatedTarget).innerHeight();
+
+        $(this).find('.active.carousel-item').parent().animate({
+            height: nextH
+        }, 500);
+    });
+
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 
