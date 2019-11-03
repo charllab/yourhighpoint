@@ -201,7 +201,7 @@ function register_acf_block_types()
     ]);
     acf_register_block_type([
         'name' => 'simple-pingpong',
-        'title' => __('Simple Layout Block'),
+        'title' => __('Simple Image and Text Layout Block'),
         'description' => __('A simple image and text block.'),
         'render_template' => 'includes/gutenburg/simple-pingpong.php',
         'category' => 'formatting',

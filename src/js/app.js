@@ -35,7 +35,7 @@ jQuery(function () {
     var maxHeight = -1;
     var win = jQuery(window); //this = window
 
-    if (win.width() >= 1379) {
+    if (win.width() >= 1279) {
 
         jQuery('.js--ping-pong__content-block').each(function() {
             maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
@@ -49,7 +49,7 @@ jQuery(function () {
     jQuery(window).on('resize', function(){
         var win = jQuery(this); //this = window
 
-        if (win.width() >= 1379) {
+        if (win.width() >= 1279) {
             var maxHeight = -1;
 
             jQuery('.js--ping-pong__content-block').each(function() {
