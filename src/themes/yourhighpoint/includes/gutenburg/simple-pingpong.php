@@ -30,10 +30,11 @@ if (!empty($block['anchor'])) {
                         background-position: <?php the_field('block_image_focuspoint'); ?>;"
                 >
                 </div>
-                <div class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>">
+                <div class="col-xl-6
+                <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>
+                js--ping-pong__content-block">
                     <div class="
                     section--ping-pong__content-page
-                    js--ping-pong__content-block
                     h-100 d-flex flex-column justify-content-center py-3 py-xl-6 px-2 px-lg-3
                     <?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
                         <h2><?php the_field('block_heading'); ?></h2>

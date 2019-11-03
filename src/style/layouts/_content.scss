@@ -217,11 +217,14 @@ body {
 
 .section--ping-pong .section--ping-pong__content-page {
 
-    @include media-breakpoint-down(lg) {
-        min-height: auto !important;
-    }
-
     @include media-breakpoint-up(xxl) {
         max-width: 834px;
+    }
+}
+
+.js--ping-pong__content-block {
+
+    @include media-breakpoint-down(lg) {
+        min-height: auto !important;
     }
 }
