@@ -31,6 +31,37 @@ jQuery(function () {
         }, 250);
     });
 
+    // find the highest of the ping-pong blocks
+    var maxHeight = -1;
+    var win = jQuery(window); //this = window
+
+    if (win.width() >= 1379) {
+
+        jQuery('.js--ping-pong__content-block').each(function() {
+            maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
+        });
+
+        jQuery('.js--ping-pong__content-block').each(function() {
+            jQuery(this).css('min-height', maxHeight + 'px');
+        });
+    }
+
+    jQuery(window).on('resize', function(){
+        var win = jQuery(this); //this = window
+
+        if (win.width() >= 1379) {
+            var maxHeight = -1;
+
+            jQuery('.js--ping-pong__content-block').each(function() {
+                maxHeight = maxHeight > jQuery(this).height() ? maxHeight : jQuery(this).height();
+            });
+
+            jQuery('.js--ping-pong__content-block').each(function() {
+                jQuery(this).css('min-height', maxHeight + 'px');
+            });
+        }
+    });
+
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 

@@ -6,7 +6,7 @@ if (!empty($block['anchor'])) {
 }
 $className = '';
 if (!empty($block['align'])) {
-    $className .= ' align' . $block['align'];
+    $className .= 'align' . $block['align'];
 }
 // Load values and assing defaults.
 $post_objects = get_field('banners');

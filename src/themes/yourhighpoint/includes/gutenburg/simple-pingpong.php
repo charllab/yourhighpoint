@@ -4,12 +4,6 @@ $id = 'banner-carousel-' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
-$className = '';
-if( !empty($block['align']) ) {
-    $className .= ' align' . $block['align'];
-}
-// Load values and assing defaults.
-$post_objects = get_field('banners');
 ?>
 
 <?php if (is_admin()): ?>
@@ -19,66 +13,44 @@ $post_objects = get_field('banners');
             <span class="editor-block-icon block-editor-block-icon has-colors">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" role="img"
                      aria-hidden="true" focusable="false"><path d="M0,0h24v24H0V0z" fill="none"></path><path
-                        d="M19,4H5C3.89,4,3,4.9,3,6v12c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V6C21,4.9,20.11,4,19,4z M19,18H5V8h14V18z"></path></svg></span>Banner
-            Carousel
+                        d="M19,4H5C3.89,4,3,4.9,3,6v12c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V6C21,4.9,20.11,4,19,4z M19,18H5V8h14V18z"></path></svg></span>Simple
+            Layout
         </div>
     </div>
 
 <?php else: ?>
 
-    <div class="bg-carousel <?php echo esc_attr($className); ?>">
-        <div id="banner-carousel-<?php echo $id; ?>" class="carousel slide carousel-block__banner" data-ride="carousel">
-
-            <?php if (count($post_objects) > 1) { ?>
-                <ol class="carousel-indicators d-md-none">
-                    <?php $index = 1; ?>
-
-                    <?php foreach ($post_objects as $post): ?>
-                        <li data-target="#banner-carousel-<?php echo $id; ?>" data-slide-to="<?php echo $index - 1; ?>"
-                            class="<?php echo($index == 1 ? 'active' : ''); ?>"></li>
-                        <?php $index++; endforeach; ?>
-                </ol>
-            <?php } ?>
-
-            <div class="carousel-inner">
-
-                <?php $index = 1; ?>
-
-                <?php foreach ($post_objects as $post): ?>
-
-                <div class="carousel-item carousel-item-<?php echo $index; ?> <?php echo($index == 1 ? 'active' : ''); ?> d-flex" style="background-image: url(<?php echo $post['banner_image']; ?>); background-position: <?php echo $post['image_position']; ?>">
-                    <div class="banner__color-overlay"></div>
-                        <div class="container py-3 py-md-1">
-                            <div class="row align-items-center">
-                                <div class="col-xxl-6">
-                                    <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
-                                    <?php if ($post['blurb']): ?>
-                                    <p class="lead text-primary d-none d-md-block"><?php echo $post['blurb']; ?></p>
-                                    <?php endif; ?>
-                                    <?php if ($post['button_text']): ?>
-                                    <a href="<?php echo $post['button_link']; ?>" class="btn btn-primary"><?php echo $post['button_text']; ?></a>
-                                    <?php endif; ?>
-                                </div>
-                            </div>
-                        </div>
+    <div class="section--ping-pong p-0 alignfull">
+        <div class="container-fluid no-gutters p-0">
+            <?php $thelayout = get_field('block_image_position'); ?>
+            <div class="row">
+                <div
+                    class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-1<?php endif; ?> bg-size-cover"
+                    style="background-image: url(<?php the_field('block_image'); ?>);
+                        background-position: <?php the_field('block_image_focuspoint'); ?>;"
+                >
                 </div>
-                <?php $index++; endforeach; ?>
-
+                <div class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>">
+                    <div class="
+                    section--ping-pong__content-page
+                    js--ping-pong__content-block
+                    h-100 d-flex flex-column justify-content-center py-3 py-xl-6 px-2 px-lg-3
+                    <?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
+                        <h2><?php the_field('block_heading'); ?></h2>
+                        <p><?php the_field('block_blurb'); ?></p>
+                        <?php if (get_field('block_button_text')): ?>
+                            <a href=<?php the_field('block_button_link'); ?>"
+                            class=" btn btn-primary"
+                            >
+                            <?php the_field('block_button_text'); ?>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
             </div>
 
-            <?php if (count($post_objects) > 1) { ?>
-                <a class="carousel-control-prev" href="#banner-carousel-<?php echo $id; ?>" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#banner-carousel-<?php echo $id; ?>" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            <?php } ?>
         </div>
     </div>
-
 
     <?php wp_reset_postdata(); ?>
 
