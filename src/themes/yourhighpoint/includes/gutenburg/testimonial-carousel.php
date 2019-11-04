@@ -8,7 +8,7 @@ $className = '';
 if( !empty($block['align']) ) {
     $className .= ' align' . $block['align'];
 }
-// Load values and assing defaults.
+// Load value defaults.
 $post_objects = get_field('testimonials');
 ?>
 
