@@ -20,7 +20,6 @@ jQuery(function () {
         }, 500);
     });
 
-
     // developer window resizing trigger slide next to fix height
     var resizeTimer;
 
@@ -61,6 +60,25 @@ jQuery(function () {
             });
         }
     });
+
+    // services hover-state trigger
+
+    // jQuery('.services__sub-blocks--content').on("mouseover", function () {
+    //     jQuery(this).css("background-color","red")
+    // });
+
+    jQuery('.services__sub-block--item').hover(
+        function() {
+            jQuery(this).find('.services__sub-blocks--heading').addClass('d-none');
+            jQuery(this).find('.services__sub-blocks--content').addClass('d-flex');
+        }, function() {
+            jQuery(this).find('.services__sub-blocks--heading').removeClass('d-none');
+            jQuery(this).find('.services__sub-blocks--content').removeClass('d-flex');
+
+        }
+    );
+
+
 
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
