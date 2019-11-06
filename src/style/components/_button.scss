@@ -22,9 +22,6 @@ button {
     font-size: .9rem;
     padding: $spacer/2 0;
 
-    @include media-breakpoint-down(xxs) {
-        max-width: 140px;
-    }
     @include media-breakpoint-down(lg) {
         width: 90%;
     }

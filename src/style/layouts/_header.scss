@@ -33,12 +33,6 @@
     .dropdown-toggle::after {
         margin-left: .45rem;
     }
-    @include media-breakpoint-down(xs) {
-        .nav-logo img {
-            width: 204px;
-            height: auto;
-        }
-    }
 
     @include media-breakpoint-down(md) {
         padding: 0;
@@ -59,12 +53,32 @@
         }
     }
 
-    @include media-breakpoint-up(xs) {
-        .nav-logo img {
-            width: 404px;
-            height: auto;
+    .nav-logo img {
+
+        height: auto;
+
+        @include media-breakpoint-down(xxs) {
+                width: 204px;
+        }
+
+        @media (min-width: 414px) {
+                width: 310px;
+        }
+
+        @include media-breakpoint-up(xs) {
+            .nav-logo img {
+                width: 404px;
+
+            }
         }
     }
+
+
+
+
+
+
+
 
     @include media-breakpoint-up(lg) {
         .navbar-nav .menu-item.show > .nav-link {
