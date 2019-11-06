@@ -219,6 +219,16 @@ function register_acf_block_types()
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['layout'],
     ]);
+    acf_register_block_type([
+        'name' => 'services-sub-blocks',
+        'title' => __('Services Overflow Sub Blocks'),
+        'description' => __('A smart service block display.'),
+        'render_template' => 'includes/gutenburg/smart-services-blocks.php',
+        'category' => 'formatting',
+        'supports' => array( 'align' => false ),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
 }
 
 if (function_exists('acf_register_block_type')) {

@@ -63,11 +63,7 @@ jQuery(function () {
 
     // services hover-state trigger
 
-    // jQuery('.services__sub-blocks--content').on("mouseover", function () {
-    //     jQuery(this).css("background-color","red")
-    // });
-
-    jQuery('.services__sub-block--item').hover(
+    jQuery('.js-services__sub-block--item').hover(
         function() {
             jQuery(this).find('.services__sub-blocks--heading').addClass('d-none');
             jQuery(this).find('.services__sub-blocks--content').addClass('d-flex');
