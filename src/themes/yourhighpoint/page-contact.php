@@ -33,25 +33,24 @@ get_header(); ?>
             <div class="container-fluid no-gutters p-0">
                 <div class="row no-gutters">
                     <div
-                        class="col-xl-4 bg-size-cover"
-                        style="background-image: url(<?php the_field('block_image'); ?>);
-                            background-position: <?php the_field('block_image_focuspoint'); ?>;"
+                        class="col-xl-7 bg-size-cover"
+                        style="background-image: url(<?php bloginfo('template_url'); ?>/images/contact-page-image.jpg);
+                            background-position: center;"
+                        id="content-detail__block-image"
                     >
                     </div>
-                    <div class="col-xl-8
-                js--ping-pong__content-block">
-                        <div class="
-                    section--ping-pong__content-page
-                    h-100 d-flex flex-column justify-content-center py-3 py-xl-6 px-2 px-lg-3">
+                    <div class="col-xl-5 js--ping-pong__content-block">
+                        <div class="section--ping-pong__content-page h-100 d-flex flex-column justify-content-center px-1 py-xl-2 px-lg-3">
 
-                            <div class="py-2 px-2 px-xxl-4 bg-light">
+
+                            <div class="content-detail__block pt-2 pb-1 pt-sm-3 pb-sm-2 py-lg-2 px-sm-4 px-lg-4 px-xxl-6 text-center text-xl-left">
                                 <h2 class="h1">Our Clinic</h2>
                                 <?php
                                 $removethese = array("(", " ", ")", "-");
                                 ?>
-                                <table>
+                                <table class="w-100">
                                     <tr>
-                                        <td><span class="lead text-uppercase">Phone: <a
+                                        <td><span class="contact-details text-uppercase">Phone: <a
                                                     href="tel:+1<?php echo strip_tel(get_field('phone_number', 'option')); ?>"
                                                     class="text-body"><?php echo get_field('phone_number', 'option'); ?></a></span>
                                         </td>
@@ -60,7 +59,7 @@ get_header(); ?>
                                         <td>&nbsp;</td>
                                     </tr>
                                     <tr>
-                                        <td><span class="lead text-uppercase">E-mail: <a
+                                        <td><span class="contact-details text-uppercase">E-mail: <a
                                                     href="mailto:<?php echo get_field('email_address', 'option'); ?>"
                                                     class="text-body"><?php echo get_field('email_address', 'option'); ?></a></span>
                                         </td>
@@ -70,11 +69,12 @@ get_header(); ?>
                                     </tr>
                                     <tr style="vertical-align: top;">
                                         <td><span
-                                                class="lead text-uppercase">Address: <?php echo get_field('physical_address', 'option'); ?><span></span>
+                                                class="contact-details text-uppercase">Address: <?php echo get_field('physical_address', 'option'); ?><span></span>
                                         </td>
                                     </tr>
                                 </table>
                             </div>
+
 
                         </div>
                     </div>
@@ -96,10 +96,9 @@ get_header(); ?>
         <?php endif; ?>
 
 
-
         <?php if (get_field('map_image', 'option')) {
             ; ?>
-            <div class="container px-0 contact-page__map-block alignfull bg-cover position-relative" style="background-image: url(<?php echo get_field('map_image', 'option'); ?>)">
+            <div class="container px-0 contact-page__map-block alignfull bg-size-cover position-relative" style="background-image: url(<?php echo get_field('map_image', 'option'); ?>)">
                 <a href="<?php echo get_field('map_link', 'option'); ?>"
                    class="contact-page__map-link postion-absolute w-100 h-100 d-block"
                    target="_blank"
@@ -109,9 +108,13 @@ get_header(); ?>
             </div>
         <?php }; ?>
 
-        <div class="container">
+        <div class="container py-2 py-sm-3">
             <div class="row">
-                <div class="col">
+                <div class="col-lg-6 col-xl-4 offset-xl-1">
+                    <h3 class="h1">HAVE A QUESTION?</h3>
+                    <p class="text-uppercase font-weight-bold">Just email us through the&nbsp;form</p>
+                </div>
+                <div class="col-lg-6 col-xl-7">
                     <?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=10]'); ?>
                 </div>
             </div>
