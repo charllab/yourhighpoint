@@ -1,6 +1,6 @@
 <?php
 // Create id attribute allowing for custom "anchor" value.
-$id = 'banner-carousel-' . $block['id'];
+$id = 'center-layout-block-' . $block['id'];
 if (!empty($block['anchor'])) {
     $id = $block['anchor'];
 }
@@ -20,25 +20,78 @@ if (!empty($block['anchor'])) {
 
 <?php else: ?>
 
-    <section style="background-color: <?php the_field('center_block_color'); ?>" class="alignfull">
-        <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
-            <div class="row">
+    <?php
 
-                <div class="col text-center h-100 d-md-flex align-items-center justify-content-center">
-                    <?php if (get_field('column_image')) : ?>
-                        <img src="<?php the_field('column_image'); ?>" alt=" " class="mb-2 mb-md-1 img-fluid <?php the_field('column_image_position'); ?>">
-                    <?php endif; ?>
-                    <?php if (get_field('column_header')) : ?>
-                        <h2 class="h1"><?php the_field('column_header'); ?></h2>
-                    <?php endif; ?>
-                    <?php if (get_field('column_blurb')) : ?>
-                        <p class="lead text-primary"><?php the_field('column_blurb'); ?></p>
-                    <?php endif; ?>
-                </div>
+    // check if the flexible content field has rows of data
+    if (have_rows('center_block_options')):
 
-            </div>
-        </div>
-    </section>
+        // loop through the rows of data
+        while (have_rows('center_block_options')) : the_row();
+            if (get_row_layout() == 'center_block_image_only'): ?>
+
+                <section style="background-color: <?php the_field('center_block_color'); ?>" class="alignfull">
+                    <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
+                        <div class="row">
+
+                            <div class="col text-center h-100 d-md-flex align-items-center justify-content-center">
+                                <?php if (get_sub_field('column_single_image')) : ?>
+                                    <img src="<?php the_sub_field('column_single_image'); ?>" alt=" "
+                                         class="mb-2 mb-md-1 img-fluid <?php the_sub_field('column_single_image_position'); ?>">
+                                <?php endif; ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            <?php elseif (get_row_layout() == 'center_block_image_and_text'): ?>
+
+                <section style="background-color: <?php the_field('center_block_color'); ?>" class="alignfull">
+                    <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
+                        <div class="row">
+
+                            <div class="col text-center h-100 d-md-flex align-items-center justify-content-center">
+                                <?php if (get_sub_field('center_block_image_and_text_image')) : ?>
+                                    <img src="<?php the_sub_field('center_block_image_and_text_image'); ?>" alt=" "
+                                         class="mb-2 mb-md-1 img-fluid <?php the_sub_field('center_block_image_and_text_image_position'); ?>">
+                                <?php endif; ?>
+                                <?php if (get_sub_field('center_block_image_and_text_header')) : ?>
+                                    <h2 class="h1"><?php the_sub_field('center_block_image_and_text_header'); ?></h2>
+                                <?php endif; ?>
+                                <?php if (get_sub_field('center_block_image_and_text_blurb')) : ?>
+                                    <p class="lead text-primary"><?php the_sub_field('center_block_image_and_text_blurb'); ?></p>
+                                <?php endif; ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            <?php elseif (get_row_layout() == 'center_block_text_only'): ?>
+
+                <section style="background-color: <?php the_field('center_block_color'); ?>" class="alignfull">
+                    <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
+                        <div class="row">
+
+                            <div
+                                class="col text-center h-100 d-md-flex flex-column align-items-center justify-content-center">
+                                <?php if (get_sub_field('center_block_text_only_header')) : ?>
+                                    <h2 class="h1"><?php the_sub_field('center_block_text_only_header'); ?></h2>
+                                <?php endif; ?>
+                                <?php if (get_sub_field('center_block_text_only_blurb')) : ?>
+                                    <p class="text-body"><?php the_sub_field('center_block_text_only_blurb'); ?></p>
+                                <?php endif; ?>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+            <?php endif; ?>
+
+        <?php endwhile; ?>
+
+    <?php endif; ?>
 
     <?php wp_reset_postdata(); ?>
 

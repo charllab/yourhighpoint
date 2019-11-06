@@ -313,5 +313,16 @@ body {
             max-width: 400px;
         }
     }
+}
 
+// contact page
+.contact-page__map-block {
+    height: 300px;
+    @include media-breakpoint-up(xs) {
+        height: 600px;
+    }
+}
+.contact-page__map-link {
+    top: 0;
+    left: 0;
 }
