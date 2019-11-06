@@ -61,23 +61,18 @@
                 width: 204px;
         }
 
+        @media (min-width: 373px) {
+            width: 270px;
+        }
+
         @media (min-width: 414px) {
                 width: 310px;
         }
 
         @include media-breakpoint-up(xs) {
-            .nav-logo img {
                 width: 404px;
-
-            }
         }
     }
-
-
-
-
-
-
 
 
     @include media-breakpoint-up(lg) {
