@@ -110,7 +110,7 @@ get_header(); ?>
 
         <div class="container py-2 py-sm-3">
             <div class="row">
-                <div class="col-lg-6 col-xl-4 offset-xl-1">
+                <div class="col-lg-5 col-xl-4 offset-lg-1">
                     <h3 class="h1">HAVE A QUESTION?</h3>
                     <p class="text-uppercase font-weight-bold">Just email us through the&nbsp;form</p>
                 </div>
