@@ -1,4 +1,39 @@
 <?php
+
+/*start*/
+
+/**
+ * SVG Icons class.
+ */
+require get_template_directory() . '/classes/class-twentynineteen-svg-icons.php';
+
+/**
+ * Custom Comment Walker template.
+ */
+require get_template_directory() . '/classes/class-twentynineteen-walker-comment.php';
+
+/**
+ * Enhance the theme by hooking into WordPress.
+ */
+require get_template_directory() . '/inc/template-functions.php';
+
+/**
+ * SVG Icons related functions.
+ */
+require get_template_directory() . '/inc/icon-functions.php';
+
+/**
+ * Custom template tags for the theme.
+ */
+require get_template_directory() . '/inc/template-tags.php';
+
+/**
+ * Customizer additions.
+ */
+require get_template_directory() . '/inc/customizer.php';
+
+/*end*/
+
 /* Require Includes */
 include_once get_template_directory().'/includes/gutenburg.php';
 include_once get_template_directory().'/includes/helper-functions.php';

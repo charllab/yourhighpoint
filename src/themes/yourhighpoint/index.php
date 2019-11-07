@@ -2,22 +2,35 @@
 get_header();
 ?>
 
-<div class="container">
-    <div class="row">
-        <div class="col-12">
-            <?php if (have_posts()) : ?>
+    <p>index.php</p>
 
-                <?php /* Start the Loop */ ?>
+    <main class="py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <?php
+                    if ( have_posts() ) {
 
-                <?php while (have_posts()) : the_post(); ?>
+                        // Load posts loop.
+                        while ( have_posts() ) {
+                            the_post();
+                            get_template_part( 'template-parts/content/content' );
+                        }
 
-                    <?php the_content(); ?>
+                        // Previous/next page navigation.
+                        twentynineteen_the_posts_navigation();
 
-                <?php endwhile; ?>
+                    } else {
 
-            <?php endif; ?>
+                        // If no content, include the "No posts found" template.
+                        get_template_part( 'template-parts/content/content', 'none' );
+
+                    }
+                    ?>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+
+    </main>
 
 <?php get_footer(); ?>
