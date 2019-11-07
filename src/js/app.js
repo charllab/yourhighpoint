@@ -74,8 +74,6 @@ jQuery(function () {
         }
     );
 
-
-
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 
@@ -95,6 +93,32 @@ jQuery(function () {
             jQuery(this).off("touchmove");
         });
     });
+
+    // remove empty wp-tags
+    jQuery('p:empty').remove();
+
+    // owl carousel sponsors
+    jQuery('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 27,
+        nav: true,
+        dots: true,
+        smartSpeed: 500,
+        autoplay: true,
+        navContainer: '.owl-nav-outside',
+        navText: '',
+        responsive:{
+            0: {
+                items:1
+            },
+            600: {
+                items:3
+            },
+            1000: {
+                items:5
+            }
+        }
+    })
 
 
     // Auto target _blank external links

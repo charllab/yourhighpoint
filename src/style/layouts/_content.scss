@@ -180,7 +180,7 @@ body {
         }
     }
 
-    @include media-breakpoint-up(lg) {
+    @include media-breakpoint-up(xxl) {
         .carousel-control-prev-icon, .carousel-control-next-icon {
             width: 44px;
             height: 89px;

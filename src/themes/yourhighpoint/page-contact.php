@@ -31,7 +31,7 @@ get_header(); ?>
 
         <div class="section--ping-pong p-0 alignfull">
             <div class="container-fluid no-gutters p-0">
-                <div class="row no-gutters">
+                <div class="row no-gutters mb-1">
                     <div
                         class="col-xl-7 bg-size-cover"
                         style="background-image: url(<?php bloginfo('template_url'); ?>/images/contact-page-image.jpg);
