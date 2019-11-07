@@ -229,6 +229,16 @@ function register_acf_block_types()
         'icon' => 'welcome-widgets-menus',
         'keywords' => ['layout'],
     ]);
+    acf_register_block_type([
+        'name' => 'sponsor-carousel-blocks',
+        'title' => __('Sponsorship Carousel'),
+        'description' => __('A easy responsive sponsor carousel block.'),
+        'render_template' => 'includes/gutenburg/sponsor-carousel-blocks.php',
+        'category' => 'formatting',
+        'supports' => array( 'align' => false ),
+        'icon' => 'welcome-widgets-menus',
+        'keywords' => ['layout'],
+    ]);
 }
 
 if (function_exists('acf_register_block_type')) {
