@@ -346,6 +346,14 @@ body {
         border-top: 1px dashed $secondary;
 }
 
+article {
+    &:last-of-type {
+        .blog__hr {
+            display: none;
+        }
+    }
+}
+
 .posted-on {
     display: block;
     margin-bottom: $spacer/2;
