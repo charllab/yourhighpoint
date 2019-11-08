@@ -7,16 +7,14 @@
  * @since 1.0.0
  */
 
-$discussion = ! is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
+$discussion = !is_page() && twentynineteen_can_show_post_thumbnail() ? twentynineteen_get_discussion_data() : null; ?>
 
-<?php if ( ! is_page() ) : ?>
+<?php if (!is_page()) : ?>
 
-<p>entry-header.php</p>
+    <div class="entry-meta mb-2">
 
-<div class="entry-meta text-center">
+        <?php the_title('<h1 class="entry-title mb-250">', '</h1>'); ?>
+        <?php twentynineteen_posted_on(); ?>
 
-    <?php twentynineteen_posted_on(); ?>
-    <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-</div><!-- .entry-meta -->
+    </div><!-- .entry-meta -->
 <?php endif; ?>

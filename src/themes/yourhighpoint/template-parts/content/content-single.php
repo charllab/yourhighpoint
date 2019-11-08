@@ -11,12 +11,10 @@
 
 ?>
 
-<p>content-single.php</p>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
+    <?php //the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
 
-    <div class="container">
+    <div class="container pt-3">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <header class="entry-header">
@@ -53,14 +51,18 @@
 
             </div>
         </div>
-        <div class="row py-2">
+        <div class="row pt-2 pb-3">
             <div class="col col-md-5 offset-md-1 text-left">
-                <span class="nav-previous h5 d-md-none mb-0"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('Prev', 'Previous post link', 'sproingcreative') . '</span>'); ?></span>
-                <span class="nav-previous text-primary font-weight-bold d-none d-md-block"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('&larr;', 'Previous post link', 'sproingcreative') . '</span> Previous Post'); ?></span>
+                <span
+                    class="nav-previous h5 d-md-none mb-0"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('Prev', 'Previous post link', 'sproingcreative') . '</span>'); ?></span>
+                <span
+                    class="nav-previous text-primary font-weight-bold d-none d-md-block"><?php previous_post_link('%link', '<span class="meta-nav">' . _x('&larr;', 'Previous post link', 'sproingcreative') . '</span> Previous Post'); ?></span>
             </div><!-- col -->
             <div class="col col-md-5 text-right">
-                <span class="nav-next h5 d-md-none mb-0"><?php next_post_link('%link', '<span class="meta-nav">' . _x('Next', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
-                <span class="nav-next text-primary font-weight-bold d-none d-md-block"><?php next_post_link('%link', 'Next Post <span class="meta-nav">' . _x('&rarr;', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
+                <span
+                    class="nav-next h5 d-md-none mb-0"><?php next_post_link('%link', '<span class="meta-nav">' . _x('Next', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
+                <span
+                    class="nav-next text-primary font-weight-bold d-none d-md-block"><?php next_post_link('%link', 'Next Post <span class="meta-nav">' . _x('&rarr;', 'Next post link', 'sproingcreative') . '</span>'); ?></span>
             </div><!-- col -->
         </div>
     </div>

@@ -2,8 +2,6 @@
 get_header();
 ?>
 
-    <p>single.php</p>
-
     <main>
         <?php
 

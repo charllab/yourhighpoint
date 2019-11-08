@@ -130,3 +130,8 @@ p {
 .has-huge-font-size, .has-larger-font-size {
     @extend .h1;
 }
+
+.blog__block .h1 {
+    @extend .h1;
+    font-size: 1.35rem;
+}

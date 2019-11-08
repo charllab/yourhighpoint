@@ -342,6 +342,10 @@ body {
 
 // blog
 
+.blog__hr {
+        border-top: 1px dashed $secondary;
+}
+
 .posted-on {
     display: block;
     margin-bottom: $spacer/2;
