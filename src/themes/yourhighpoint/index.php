@@ -44,7 +44,7 @@ global $post;
                         </p>
                         <p class="mb-0">
                             <a href="<?php the_permalink(); ?>" class="font-weight-bold">
-                                <span>Continue Reading</span> <em class="fa fa-long-arrow-right"></em>
+                                <span>Continue Reading</span> <i class="ml-250 fas fa-arrow-right"></i>
                             </a>
                         </p>
 

@@ -12,8 +12,10 @@
     <title><?php bloginfo('name'); ?></title>
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/61d303198f.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:900|Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <!--<script src="https://kit.fontawesome.com/61d303198f.js" crossorigin="anonymous"></script>-->
+    <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
+
 
     <?php wp_head(); ?>
 </head>
