@@ -135,3 +135,15 @@ p {
     @extend .h1;
     font-size: 1.35rem;
 }
+
+ul {
+    @include media-breakpoint-down(sm) {
+        padding-left: 1.25rem;
+    }
+}
+
+ul li {
+    ul {
+        padding-left: 1rem;
+    }
+}

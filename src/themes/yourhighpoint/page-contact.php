@@ -33,8 +33,8 @@ get_header(); ?>
                 <div class="row no-gutters mb-1">
                     <div
                         class="col-xl-7 bg-size-cover"
-                        style="background-image: url(<?php bloginfo('template_url'); ?>/images/contact-page-image.jpg);
-                            background-position: center;"
+                        style="background-image: url(<?php the_field('contact_page_image')?>);
+                            background-position: <?php the_field('contact_page_focus_point')?>;"
                         id="content-detail__block-image"
                     >
                     </div>
@@ -126,7 +126,7 @@ get_header(); ?>
         <?php if (get_field('map_image', 'option')) {
             ; ?>
             <div class="container px-0 contact-page__map-block alignfull bg-size-cover position-relative"
-                 style="background-image: url(<?php echo get_field('map_image', 'option'); ?>)">
+                 style="background-image: url(<?php echo get_field('map_image', 'option'); ?>); background-position: center;">
                 <a href="<?php echo get_field('map_link', 'option'); ?>"
                    class="contact-page__map-link postion-absolute w-100 h-100 d-block"
                    target="_blank"

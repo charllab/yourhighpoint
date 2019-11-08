@@ -35,13 +35,22 @@ get_header();
             </div>
         </div>
 
-    <?php elseif (is_page([48, 50])) : ?>
+    <?php elseif (is_page([50])) : ?>
+
+        <?php if (get_field('page_banner')) : ?>
+            <div class="general-page__banner-bg bg-size-cover"
+                 style="
+                     background-image: url(<?php the_field('page_banner'); ?>);
+                     background-position: <?php the_field('banner_position'); ?>;
+                     "></div>
+        <?php endif; ?>
 
         <?php if (have_posts()) : ?>
 
             <?php /* Start the Loop */ ?>
 
             <?php while (have_posts()) : the_post(); ?>
+                <h1 class="text-center py-2 mb-0"><?php the_title(); ?></h1>
                 <?php the_content(); ?>
 
             <?php endwhile; ?>
@@ -50,29 +59,31 @@ get_header();
 
     <?php else : ?>
 
+        <?php if (get_field('page_banner')) : ?>
+            <div class="general-page__banner-bg bg-size-cover"
+                 style="
+                     background-image: url(<?php the_field('page_banner'); ?>);
+                     background-position: <?php the_field('banner_position'); ?>;
+                     "></div>
+        <?php endif; ?>
+
         <div class="container py-2">
 
             <div class="row">
                 <div class="col">
-
-                    <?php
-                    if (function_exists('yoast_breadcrumb')) {
-                        yoast_breadcrumb('<p id="breadcrumbs" class="spr-breadcrumb mb-1">', '</p>');
-                    }
-                    ?>
-
-                    <h1 class="text-capitalize"><?php the_title(); ?></h1>
 
                     <?php if (have_posts()) : ?>
 
                         <?php /* Start the Loop */ ?>
 
                         <?php while (have_posts()) : the_post(); ?>
+                            <h1 class="text-center"><?php the_title(); ?></h1>
                             <?php the_content(); ?>
 
                         <?php endwhile; ?>
 
                     <?php endif; ?>
+
                 </div><!-- col -->
             </div><!-- row -->
         </div><!-- container -->
