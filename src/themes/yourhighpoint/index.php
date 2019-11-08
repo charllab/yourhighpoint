@@ -34,9 +34,11 @@ global $post;
 
                 while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
+                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
                     <div class="blog__block">
                         <h2 class="h1 mb-0"><?php the_title(); ?></h2>
-                        <span class="blog__date font-weight-bold text-secondary"><?php the_date(); ?></span>
+                        <?php twentynineteen_posted_on(); ?>
                         <p>
                             <?php the_excerpt(); ?>
                         </p>
@@ -48,7 +50,9 @@ global $post;
 
                     </div>
                     <hr class="blog__hr my-2 w-100">
-                
+
+                </article>
+
                 <?php endwhile; ?>
 
             </div><!-- col -->

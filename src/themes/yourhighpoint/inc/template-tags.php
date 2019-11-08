@@ -19,8 +19,7 @@ function twentynineteen_posted_on() {
     );
 
     printf(
-        '<span class="posted-on"><a href="%1$s" rel="bookmark">%2$s</a></span>',
-        esc_url( get_permalink() ),
+        '<span class="posted-on font-weight-bold text-secondary">%1$s</span>',
         $time_string
     );
 }
