@@ -289,13 +289,18 @@ body {
     }
 
     .services__sub-blocks--heading {
-        bottom: 35.5%;
         left: 10%;
         text-align: center;
 
         width: 80%;
+        @include media-breakpoint-down(sm) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
 
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(sm) {
             width: 100%;
             bottom: 0;
             left: 0;

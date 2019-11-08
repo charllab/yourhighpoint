@@ -50,17 +50,19 @@ if (!empty($block['anchor'])) {
                     <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
                         <div class="row">
 
-                            <div class="col text-center h-100 d-md-flex align-items-center justify-content-center">
+                            <div class="col text-center h-100 d-lg-flex align-items-center justify-content-center">
                                 <?php if (get_sub_field('center_block_image_and_text_image')) : ?>
                                     <img src="<?php the_sub_field('center_block_image_and_text_image'); ?>" alt=" "
                                          class="mb-2 mb-md-1 img-fluid <?php the_sub_field('center_block_image_and_text_image_position'); ?>">
                                 <?php endif; ?>
-                                <?php if (get_sub_field('center_block_image_and_text_header')) : ?>
-                                    <h2 class="h1"><?php the_sub_field('center_block_image_and_text_header'); ?></h2>
-                                <?php endif; ?>
-                                <?php if (get_sub_field('center_block_image_and_text_blurb')) : ?>
-                                    <p class="lead text-primary"><?php the_sub_field('center_block_image_and_text_blurb'); ?></p>
-                                <?php endif; ?>
+                                <div>
+                                    <?php if (get_sub_field('center_block_image_and_text_header')) : ?>
+                                        <h2 class="h1"><?php the_sub_field('center_block_image_and_text_header'); ?></h2>
+                                    <?php endif; ?>
+                                    <?php if (get_sub_field('center_block_image_and_text_blurb')) : ?>
+                                        <p class="lead text-primary"><?php the_sub_field('center_block_image_and_text_blurb'); ?></p>
+                                    <?php endif; ?>
+                                </div>
                             </div>
 
                         </div>
