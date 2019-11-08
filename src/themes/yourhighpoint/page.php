@@ -35,7 +35,7 @@ get_header();
             </div>
         </div>
 
-    <?php elseif (is_page([50])) : ?>
+    <?php elseif (is_page([40, 50])) : ?>
 
         <?php if (have_posts()) : ?>
 
