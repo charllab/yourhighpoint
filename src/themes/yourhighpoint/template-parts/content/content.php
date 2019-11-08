@@ -27,7 +27,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php twentynineteen_post_thumbnail(); ?>
+    <?php the_post_thumbnail('thumbnail', array('class' => 'img-fluid mb-1')); ?>
 
 	<div class="entry-content">
 		<?php

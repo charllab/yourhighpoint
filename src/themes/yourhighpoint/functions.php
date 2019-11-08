@@ -79,6 +79,9 @@ if (!function_exists('custom_after_setup_theme')) {
             'tertiary' => 'Legal Menu'
         ]);
 
+        // add theme support for post-thumbnails
+        add_theme_support( 'post-thumbnails' );
+
         // Style Gutenberg
         add_theme_support('editor-styles');
         add_editor_style('style-editor.css');
