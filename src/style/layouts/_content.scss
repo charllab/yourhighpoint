@@ -215,8 +215,8 @@ body {
 
 .section--ping-pong .row > div:first-child {
 
-    @include media-breakpoint-down(xl) {
-        min-height: 60vh;
+    @include media-breakpoint-down(lg) {
+        min-height: 45vh;
         background-position-y: top !important;
     }
 }

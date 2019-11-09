@@ -23,7 +23,7 @@ $post_objects = get_field('sponsor_carousel');
 <?php else: ?>
 
     <div class="alignfull">
-        <div class="py-2 py-lg-4">
+        <div class="pt-2 pt-lg-4 pt-1 pt-lg-2">
             <div class="container px-sm-4 px-xl-2 px-xxl-1">
                 <div class="row">
                     <div class="col">

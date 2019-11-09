@@ -22,7 +22,7 @@ $post_objects = get_field('services_sub_block');
 
 <?php else: ?>
 
-    <div class="container-fluid alignfull px-0">
+    <div class="container-fluid alignfull px-0" data-aos="slide-up">
         <div class="row no-gutters services__sub-blocks">
 
             <?php if (count($post_objects) > 1 && (count($post_objects) <= 5)) { ?>

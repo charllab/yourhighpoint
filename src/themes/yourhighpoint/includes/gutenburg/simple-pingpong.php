@@ -31,7 +31,7 @@ $post_objects = get_field('ping_pong_block');
                 <div
                     class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-1<?php endif; ?> bg-size-cover"
                     style="background-image: url(<?php echo $post['block_image']; ?>);
-                        background-position: <?php echo $post['block_image_focuspoint']; ?>;"
+                        background-position: <?php echo $post['block_image_focuspoint']; ?>;"  data-aos="slide-up"
                 >
                 </div>
                 <div class="col-xl-6
@@ -39,7 +39,7 @@ $post_objects = get_field('ping_pong_block');
                 js--ping-pong__content-block">
                     <div class="
                     section--ping-pong__content-page
-                    h-100 d-flex flex-column justify-content-center py-3 py-xl-6 px-2 px-lg-3
+                    h-100 d-flex flex-column justify-content-center py-3 py-xl-4 px-2 px-lg-3
                     <?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
                         <h2 class="h1"><?php echo $post['block_heading']; ?></h2>
                         <p><?php echo $post['block_blurb']; ?></p>
