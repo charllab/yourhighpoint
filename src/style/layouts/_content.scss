@@ -232,12 +232,27 @@ body {
     }
 }
 
+.home {
+
+    @media (max-width: 2373.98px) {
+        .js--ping-pong__content-block {
+            background-image: url('../images/fp-derotive.svg');
+            background-repeat: no-repeat;
+            background-position: 70% 12%;
+        }
+        .order-xl-0.js--ping-pong__content-block {
+            background-position: 20% 100%;
+        }
+    }
+}
+
 .js--ping-pong__content-block {
 
     @include media-breakpoint-down(lg) {
         min-height: auto !important;
     }
 }
+
 
 // services sub-blocks
 
@@ -325,7 +340,7 @@ body {
 .content-detail__block {
 
     @include media-breakpoint-up(xl) {
-        background-color: rgba(252,250,250,0.9);
+        background-color: rgba(252, 250, 250, 0.9);
         margin-left: -72%;
     }
 
@@ -340,6 +355,7 @@ body {
         height: 600px;
     }
 }
+
 .contact-page__map-link {
     top: 0;
     left: 0;
@@ -348,7 +364,7 @@ body {
 // blog
 
 .blog__hr {
-        border-top: 1px dashed $secondary;
+    border-top: 1px dashed $secondary;
 }
 
 article {
