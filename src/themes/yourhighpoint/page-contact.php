@@ -126,7 +126,7 @@ get_header(); ?>
         <?php if (get_field('map_image', 'option')) {
             ; ?>
             <div class="container px-0 contact-page__map-block alignfull bg-size-cover position-relative"
-                 style="background-image: url(<?php echo get_field('map_image', 'option'); ?>); background-position: center;"  data-aos="slidew-up">
+                 style="background-image: url(<?php echo get_field('map_image', 'option'); ?>); background-position: center;"  data-aos="slide-up">
                 <a href="<?php echo get_field('map_link', 'option'); ?>"
                    class="contact-page__map-link postion-absolute w-100 h-100 d-block"
                    target="_blank"
