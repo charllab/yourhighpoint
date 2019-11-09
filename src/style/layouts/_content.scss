@@ -234,7 +234,7 @@ body {
 
 .home {
 
-    @media (max-width: 2373.98px) {
+    @media (min-width: 2373.98px) {
         .js--ping-pong__content-block {
             background-image: url('../images/fp-derotive.svg');
             background-repeat: no-repeat;
