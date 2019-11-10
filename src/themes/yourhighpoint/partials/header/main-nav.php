@@ -7,7 +7,7 @@
                     <a class="btn btn btn-nav btn-nav-outline text-offwhite mb-1" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>"> Call Us</a>
                 </div>
                 <div class="col text-center">
-                    <a href="<?php the_sub_field('appointment_link', 'options'); ?>" target="_blank" class="btn btn-light btn-nav-light rounded-0 text-uppercase">
+                    <a href="<?php echo get_field('appointment_link', 'options'); ?>" target="_blank" class="btn btn-light btn-nav-light rounded-0 text-uppercase">
                         Book Now
                     </a>
                 </div>
@@ -30,7 +30,7 @@
                         <a class="btn btn-nav btn-nav-outline my-auto mr-1" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>">Call Us Today <?php the_field('phone_number', 'options'); ?></a>
 
 
-                        <a href="<?php the_sub_field('appointment_link', 'options'); ?>" target="_blank" class="btn my-auto btn-light btn-nav-light text-uppercase">
+                        <a href="<?php echo get_field('appointment_link', 'options'); ?>" target="_blank" class="btn my-auto btn-light btn-nav-light text-uppercase">
                             Book An Appointment
                         </a>
                     </div>
