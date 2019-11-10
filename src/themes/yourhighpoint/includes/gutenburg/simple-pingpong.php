@@ -24,14 +24,14 @@ $post_objects = get_field('ping_pong_block');
 
     <?php foreach ($post_objects as $post): ?>
 
-    <div class="section--ping-pong p-0 alignfull">
+    <div class="section--ping-pong p-0 alignfull" data-aos="slide-up">
         <div class="container-fluid no-gutters p-0">
             <?php $thelayout = $post['block_image_position']; ?>
             <div class="row no-gutters">
                 <div
                     class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-1<?php endif; ?> bg-size-cover"
                     style="background-image: url(<?php echo $post['block_image']; ?>);
-                        background-position: <?php echo $post['block_image_focuspoint']; ?>;"  data-aos="slide-up"
+                        background-position: <?php echo $post['block_image_focuspoint']; ?>;"
                 >
                 </div>
                 <div class="col-xl-6

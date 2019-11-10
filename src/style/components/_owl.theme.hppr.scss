@@ -69,3 +69,15 @@
         background: $primary;
     }
 }
+
+@media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+    /* IE10+ specific styles go here */
+    .owl-nav-outside {
+        button.owl-next,
+        button.owl-prev {
+            background-size : 24px;
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+        }
+    }
+}
