@@ -389,10 +389,12 @@ article {
 // teammember
 
 .teammember__profile--background {
+
     @include media-breakpoint-down(lg) {
         background-image: none !important;
     }
 }
+
 .teammember__profile--image {
     width: 600px;
 }
