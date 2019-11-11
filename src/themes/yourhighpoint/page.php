@@ -10,11 +10,13 @@ get_header();
             <div class="container-fluid no-gutters p-0">
 
                 <div class="row justify-content-center">
-                    <div class="col-xl-6 bg-size-cover"
+                    <div class="col-xl-6 bg-size-cover teammember__profile--background"
                          style="background-image: url(<?php the_field('profile_photo'); ?>);
                              background-position: <?php the_field('profile_focus_point'); ?>;"
                          alt="<?php the_title(); ?>"
-                    ></div>
+                    >
+                        <img src="<?php the_field('profile_photo'); ?>" alt="<?php the_title(); ?>" class="img-fluid mt-2 d-block mx-auto d-xl-none teammember__profile--image">
+                    </div>
                     <div class="col-lg-10 col-xl-6">
                         <div class="section--ping-pong__content-page py-2 py-xl-0 px-2 px-xl-3">
                             <?php if (have_posts()) : ?>

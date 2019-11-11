@@ -217,7 +217,7 @@ body {
 
     @include media-breakpoint-down(lg) {
         min-height: 45vh;
-        background-position-y: top !important;
+        //background-position-y: top !important;
     }
 }
 
@@ -384,4 +384,15 @@ article {
 
 .general-page__banner-bg {
     min-height: 45vh;
+}
+
+// teammember
+
+.teammember__profile--background {
+    @include media-breakpoint-down(lg) {
+        background-image: none !important;
+    }
+}
+.teammember__profile--image {
+    width: 600px;
 }
