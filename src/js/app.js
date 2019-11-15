@@ -100,7 +100,7 @@ jQuery(function () {
     // owl carousel sponsors
     jQuery('.owl-carousel').owlCarousel({
         loop: true,
-        margin: 27,
+        margin: 10,
         nav: true,
         dots: true,
         smartSpeed: 500,
