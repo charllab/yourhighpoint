@@ -34,7 +34,7 @@ $post_objects = get_field('services_sub_block');
                         style="background-image: url(<?php echo $post['service_image']; ?>)"
                         id="<?php echo strip_link($post['service_header']); ?>">
                         <div class="services__color-overlay"></div>
-                        <div class="services__sub-blocks--heading h1 text-white position-absolute mb-2 mb-lg-1">
+                        <div class="services__sub-blocks--heading h1 text-white position-absolute mb-0">
                             <?php echo $post['service_header']; ?>
                         </div>
                         <div
@@ -53,7 +53,7 @@ $post_objects = get_field('services_sub_block');
                          style="background-image: url(<?php echo $post['service_image']; ?>)"
                          id="<?php echo strip_link($post['service_header']); ?>">
                         <div class="services__color-overlay"></div>
-                        <div class="services__sub-blocks--heading h1 text-white position-absolute mb-2 mb-lg-1">
+                        <div class="services__sub-blocks--heading h1 text-white position-absolute mb-0">
                             <?php echo $post['service_header']; ?>
                         </div>
                         <div
