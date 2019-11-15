@@ -165,6 +165,7 @@ AddCharset utf-8 .css .js .xml .json .rss .atom
 # RewriteRule ^old-url/?$ /new-url [R=301,L]
 # Redirect 301 /path-to-old-location https://mysite.com/path-to-new-location
 
+RewriteRule ^our-team/?$ /our-team/dr-ryan-reed [R=301,L]
 # Security
 
 # "-Indexes" will have Apache block users from browsing folders without a default document
