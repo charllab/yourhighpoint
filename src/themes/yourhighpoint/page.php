@@ -6,34 +6,26 @@ get_header();
 
     <?php if (is_child(52)) : ?>
 
-        <div class="section section--ping-pong p-0 py-xl-4">
-            <div class="container-fluid no-gutters p-0">
-
-                <div class="row justify-content-center">
-                    <div class="col-xl-6 bg-size-cover teammember__profile--background"
-                         style="background-image: url(<?php the_field('profile_photo'); ?>);
-                             background-position: <?php the_field('profile_focus_point'); ?>;"
-                         alt="<?php the_title(); ?>"
-                    >
-                        <img src="<?php the_field('profile_photo'); ?>" alt="<?php the_title(); ?>" class="img-fluid mt-2 d-block mx-auto d-xl-none teammember__profile--image">
-                    </div>
-                    <div class="col-lg-10 col-xl-6">
-                        <div class="section--ping-pong__content-page py-2 py-xl-0 px-2 px-xl-3">
-                            <?php if (have_posts()) : ?>
-                                <h2><?php the_title(); ?></h2>
-
-                                <?php /* Start the Loop */ ?>
-
-                                <?php while (have_posts()) : the_post(); ?>
-                                    <?php the_content(); ?>
-
-                                <?php endwhile; ?>
-
-                            <?php endif; ?>
-                        </div>
-                    </div>
+        <div class="container py-2">
+            <div class="row">
+                <div class="col">
+                    <h1 class="text-center mb-2">Our Team</h1>
                 </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-xl-10">
+                    <?php if (have_posts()) : ?>
+                        <h2 class="text-center text-lg-left"><?php the_title(); ?></h2>
 
+                        <?php /* Start the Loop */ ?>
+
+                        <?php while (have_posts()) : the_post(); ?>
+                            <?php the_content(); ?>
+
+                        <?php endwhile; ?>
+
+                    <?php wp_reset_postdata(); endif ?>
+                </div>
             </div>
         </div>
 
@@ -57,7 +49,7 @@ get_header();
 
             <?php endwhile; ?>
 
-        <?php endif; ?>
+        <?php wp_reset_postdata(); endif ?>
 
     <?php else : ?>
 
@@ -91,7 +83,7 @@ get_header();
         </div><!-- container -->
 
 
-    <?php endif; ?>
+    <?php wp_reset_postdata(); endif ?>
 
 </main>
 
