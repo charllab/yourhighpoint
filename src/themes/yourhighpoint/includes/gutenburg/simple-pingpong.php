@@ -24,7 +24,7 @@ $post_objects = get_field('ping_pong_block');
 
     <?php foreach ($post_objects as $post): ?>
 
-    <div class="section--ping-pong p-0 alignfull" data-aos="slide-up">
+    <div class="section--ping-pong p-0 alignfull" data-aos="fade-up">
         <div class="container-fluid no-gutters p-0">
             <?php $thelayout = $post['block_image_position']; ?>
             <div class="row no-gutters">
