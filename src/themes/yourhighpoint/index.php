@@ -6,11 +6,11 @@ global $post;
 ?>
 
 <section style="background-color: #FFFFFF" class="alignfull">
-    <div class="container pt-2 pb-1 pt-md-3 pb-md-2">
+    <div class="container py-2">
         <div class="row">
 
             <div class="col text-center h-100 d-md-flex flex-column align-items-center justify-content-center">
-                <h2 class="h1">Our Blog</h2>
+                <h2 class="h1 mb-0">Our Blog</h2>
             </div>
 
         </div>
