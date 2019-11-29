@@ -74,6 +74,22 @@ jQuery(function () {
         }
     );
 
+    // set page main-element mt to height of header-element
+    var getHeaderHeight = function () {
+
+        jQuery('#header').each(function() {
+            headerHeight = jQuery(this).height();
+            console.log(headerHeight);
+            jQuery('main').css('margin-top', headerHeight + 'px');
+        });
+    };
+
+    getHeaderHeight();
+
+    jQuery(window).on('resize', function(){
+        getHeaderHeight();
+    });
+
     // remove data-toggle and expand dropdowns on mobile
     jQuery('#main-menu-mobile').find('a').removeAttr('data-toggle');
 
@@ -201,3 +217,4 @@ var targetBlankExternalLinks = function () {
             jQuery(this).attr('target', '_blank');
         });
 };
+

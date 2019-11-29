@@ -52,7 +52,7 @@ get_header(); ?>
                                     <tr>
                                         <td>
                                             <span class="contact-details text-uppercase font-weight-bold">Phone: </span>
-                                            <span class="contact-details text-uppercase">
+                                            <span class="contact-details">
                                                 <a
                                                     href="tel:+1<?php echo strip_tel(get_field('phone_number', 'option')); ?>"
                                                     class="text-body"><?php echo get_field('phone_number', 'option'); ?>
@@ -65,7 +65,7 @@ get_header(); ?>
                                     </tr>
                                     <tr>
                                         <td><span class="contact-details text-uppercase font-weight-bold">Fax: </span>
-                                            <span class="contact-details text-uppercase">
+                                            <span class="contact-details">
                                                 <a
                                                     href="tel:+1<?php echo strip_tel(get_field('fax_number', 'option')); ?>"
                                                     class="text-body"><?php echo get_field('fax_number', 'option'); ?>
@@ -80,7 +80,7 @@ get_header(); ?>
                                         <td>
                                             <span
                                                 class="contact-details text-uppercase font-weight-bold">E-mail: </span>
-                                            <span class="contact-details text-uppercase">
+                                            <span class="contact-details">
                                                     <a
                                                         href="mailto:<?php echo get_field('email_address', 'option'); ?>"
                                                         class="text-body"><?php echo get_field('email_address', 'option'); ?>
@@ -96,7 +96,7 @@ get_header(); ?>
                                             <span
                                                 class="contact-details text-uppercase font-weight-bold">Address: </span>
                                             <span
-                                                class="contact-details text-uppercase"><?php echo get_field('physical_address', 'option'); ?></span>
+                                                class="contact-details"><?php echo get_field('physical_address', 'option'); ?></span>
                                         </td>
                                     </tr>
                                 </table>

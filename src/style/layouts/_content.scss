@@ -98,6 +98,31 @@ body {
         }
     }
 
+    .carousel-item__content-block {
+
+        height: 11rem;
+
+        @include media-breakpoint-up(xs) {
+            height: 9rem;
+        }
+
+        @include media-breakpoint-up(md) {
+            height: 17rem;
+        }
+
+        @include media-breakpoint-up(lg) {
+            height: 15rem;
+        }
+
+        @include media-breakpoint-up(xl) {
+            height: 20rem;
+        }
+
+        @include media-breakpoint-up(xxl) {
+            height: 18rem;
+        }
+    }
+
     .carousel-control-prev, .carousel-control-next {
         width: 8%;
     }
@@ -205,6 +230,10 @@ body {
 .carousel-block__title {
 
     font-family: "NexaRustSans-Black-Free", "Open Sans", Arial, sans-serif;
+
+    @include media-breakpoint-down(xs) {
+        font-size: 1.25rem;
+    }
 
     @include media-breakpoint-up(xl) {
         font-size: 2rem;

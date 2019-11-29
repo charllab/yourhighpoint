@@ -53,7 +53,7 @@ $post_objects = get_field('banners');
                             <div class="banner__color-overlay"></div>
                             <div class="container py-3 py-md-1">
                                 <div class="row align-items-center h-100">
-                                    <div class="col-sm-9 offset-sm-1 col-xl-6 offset-xl-0">
+                                    <div class="col-sm-9 offset-sm-1 col-xl-6 offset-xl-0 carousel-item__content-block d-flex flex-column justify-content-center align-items-start">
                                         <h2 class="carousel-block__title"><?php echo $post['title']; ?></h2>
                                         <?php if ($post['blurb']): ?>
                                             <p class="lead text-primary d-none d-md-block"><?php echo $post['blurb']; ?></p>

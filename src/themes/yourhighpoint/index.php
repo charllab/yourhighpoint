@@ -5,19 +5,21 @@ global $post;
 
 ?>
 
-<section style="background-color: #FFFFFF" class="alignfull">
-    <div class="container py-2">
-        <div class="row">
 
-            <div class="col text-center h-100 d-md-flex flex-column align-items-center justify-content-center">
-                <h2 class="h1 mb-0">Our Blog</h2>
-            </div>
-
-        </div>
-    </div>
-</section>
 
 <main class="pb-4">
+
+    <section style="background-color: #FFFFFF" class="alignfull">
+        <div class="container py-2">
+            <div class="row">
+
+                <div class="col text-center h-100 d-md-flex flex-column align-items-center justify-content-center">
+                    <h2 class="h1 mb-0">Our Blog</h2>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <div class="container">
         <div class="row justify-content-center">

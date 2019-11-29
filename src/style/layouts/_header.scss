@@ -1,4 +1,8 @@
 .main-nav {
+
+    z-index: 9999;
+    top: 0;
+
     .navbar {
         padding: 0;
     }
@@ -82,7 +86,7 @@
         }
 
         .navbar-nav .nav-link {
-            padding: $spacer $spacer*1.25;
+            padding: $spacer/2 $spacer*1.25;
         }
 
         .dropdown-menu {

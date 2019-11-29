@@ -1,4 +1,4 @@
-<header id="header" class="main-nav bg-secondary">
+<header id="header" class="main-nav bg-secondary position-fixed w-100">
     <div class="bg-primary py-1">
 
         <div class="container d-lg-none px-0">
@@ -27,11 +27,10 @@
 
                 <div class="d-lg-flex flex-lg-column d-none d-lg-block ml-auto mr-1 ml-lg-1 mr-lg-0">
                     <div id="top-buttons" class="d-flex ml-auto justify-content-end align-items-center text-uppercase">
-                        <a class="btn btn-nav btn-nav-outline my-auto mr-1" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>">Call Us Today <?php the_field('phone_number', 'options'); ?></a>
-
+                        <a class="btn btn-nav btn-nav-outline my-auto mr-1" href="tel:<?php echo strip_tel(get_field('phone_number', 'options')); ?>"><?php the_field('phone_number', 'options'); ?></a>
 
                         <a href="<?php echo get_field('appointment_link', 'options'); ?>" target="_blank" class="btn my-auto btn-light btn-nav-light text-uppercase">
-                            Book An Appointment
+                            Book Now
                         </a>
                     </div>
 
