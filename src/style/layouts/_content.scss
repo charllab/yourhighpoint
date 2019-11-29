@@ -312,6 +312,8 @@ body {
     }
 
     .services__sub-block--two-items-up {
+        background-position: center;
+        background-repeat: no-repeat;
 
         @include media-breakpoint-up(xs) {
             flex-basis: 50%;

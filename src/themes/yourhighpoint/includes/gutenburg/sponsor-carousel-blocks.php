@@ -24,14 +24,6 @@ $post_objects = get_field('sponsor_carousel');
 
     <div class="alignfull pb-3">
         <div class="pt-2 pt-lg-4 pt-1 pt-lg-2">
-            <div class="container px-sm-4 px-xl-2 px-xxl-1">
-                <div class="row">
-                    <div class="col">
-                        <h3 class="carousel-block__title mb-0">Proudly Supported&nbsp;By</h3>
-                    </div>
-                </div>
-            </div>
-
             <div class="position-relative py-1">
                 <div class="owl-nav-outside"></div>
                 <div class="container px-sm-4 px-xl-2 px-xxl-1">
