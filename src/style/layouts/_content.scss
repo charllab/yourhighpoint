@@ -245,7 +245,7 @@ body {
 .section--ping-pong .row > div:first-child {
 
     @include media-breakpoint-down(lg) {
-        min-height: 45vh;
+        //min-height: 45vh;
         //background-position-y: top !important;
     }
 }
@@ -258,6 +258,13 @@ body {
 
     @include media-breakpoint-up(xxl) {
         max-width: 834px;
+    }
+}
+
+.bg-img--reset {
+
+    @include media-breakpoint-down(lg) {
+        background-image: none !important;
     }
 }
 

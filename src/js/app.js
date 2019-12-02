@@ -79,7 +79,7 @@ jQuery(function () {
 
         jQuery('#header').each(function() {
             headerHeight = jQuery(this).height();
-            console.log(headerHeight);
+            //console.log(headerHeight);
             jQuery('main').css('margin-top', headerHeight + 'px');
         });
     };

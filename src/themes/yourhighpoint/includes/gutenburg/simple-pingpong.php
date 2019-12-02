@@ -29,10 +29,16 @@ $post_objects = get_field('ping_pong_block');
             <?php $thelayout = $post['block_image_position']; ?>
             <div class="row no-gutters">
                 <div
-                    class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-1<?php endif; ?> bg-size-cover"
-                    style="background-image: url(<?php echo $post['block_image']; ?>);
+                    class="col-xl-6 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-1<?php endif; ?> bg-size-cover bg-img--reset"
+                    style="
+                        background-image: url(<?php echo $post['block_image']; ?>);
                         background-position: <?php echo $post['block_image_focuspoint']; ?>;"
                 >
+                    <img
+                        src="<?php echo $post['block_image']; ?>"
+                        alt="<?php echo $post['block_heading']; ?>"
+                        class="img-fluid d-block d-xl-none"
+                    >
                 </div>
                 <div class="col-xl-6
                 <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>
@@ -45,7 +51,7 @@ $post_objects = get_field('ping_pong_block');
                         <p><?php echo $post['block_blurb']; ?></p>
                         <?php if ($post['block_button_text']): ?>
                             <a href="<?php echo $post['block_button_link']; ?>"
-                            class=" btn btn-primary"
+                            class=" btn btn-primary btn--flex-clear"
                             >
                             <?php echo $post['block_button_text']; ?>
                             </a>

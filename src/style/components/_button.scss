@@ -53,7 +53,7 @@ button {
 }
 .btn-fullwidth {
     @extend .btn;
-    width: 100%;
+    //width: 100%;
     color: white;
     white-space: normal;
 }
@@ -70,7 +70,7 @@ button {
 }
 .is-style-full .wp-block-button__link {
     @extend .btn;
-    width: 100%;
+    //width: 100%;
     color: white;
     white-space: normal;
 }
@@ -80,4 +80,8 @@ button {
     .wp-block-button {
         margin-bottom: 0;
     }
+}
+
+.btn--flex-clear {
+    align-self: start;
 }
