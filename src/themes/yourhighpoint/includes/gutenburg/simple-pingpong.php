@@ -24,7 +24,7 @@ $post_objects = get_field('ping_pong_block');
 
     <?php foreach ($post_objects as $post): ?>
 
-    <div class="section--ping-pong p-0 alignfull" data-aos="fade-up">
+    <div class="section--ping-pong p-0 alignfull superfly" data-aos="fade-up">
         <div class="container-fluid no-gutters p-0">
             <?php $thelayout = $post['block_image_position']; ?>
             <div class="row no-gutters">
@@ -37,15 +37,14 @@ $post_objects = get_field('ping_pong_block');
                     <img
                         src="<?php echo $post['block_image']; ?>"
                         alt="<?php echo $post['block_heading']; ?>"
-                        class="img-fluid d-block d-xl-none"
+                        class="img-fluid img-swapper"
                     >
                 </div>
                 <div class="col-xl-6
-                <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>
-                js--ping-pong__content-block">
+                <?php if ($thelayout == 'image-right-text-left'): ?>order-xl-0<?php endif; ?>">
                     <div class="
                     section--ping-pong__content-page
-                    h-100 d-flex flex-column justify-content-center py-3 py-xl-4 px-2 px-lg-3
+                    h-100 d-flex flex-column justify-content-start px-2 px-lg-3
                     <?php if ($thelayout == 'image-right-text-left'): ?>ml-lg-auto<?php endif; ?>">
                         <h2 class="h1"><?php echo $post['block_heading']; ?></h2>
                         <p><?php echo $post['block_blurb']; ?></p>
