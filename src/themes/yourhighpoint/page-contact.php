@@ -37,10 +37,15 @@ get_header(); ?>
                             background-position: <?php the_field('contact_page_focus_point')?>;"
                         id="content-detail__block-image"
                     >
+                        <img
+                            src="<?php the_field('contact_page_image')?>"
+                            alt=" "
+                            class="img-fluid img-swapper"
+                        >
                     </div>
                     <div class="col-xl-5 js--ping-pong__content-block">
                         <div
-                            class="section--ping-pong__content-page h-100 d-flex flex-column justify-content-center px-1 py-xl-2 px-lg-3">
+                            class="section--ping-pong__content-page h-100 d-flex flex-column justify-content-center px-1 py-0 py-xl-2 px-lg-3">
 
                             <div
                                 class="content-detail__block pt-2 pb-1 pt-sm-3 pb-sm-2 py-lg-2 px-sm-4 px-lg-4 px-xxl-6 text-center text-xl-left">
