@@ -503,3 +503,9 @@ article {
         margin-bottom: $spacer;
     }
 }
+
+.wp-block-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
